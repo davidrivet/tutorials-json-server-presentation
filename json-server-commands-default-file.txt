@@ -1,0 +1,33 @@
+json-server cli commands on default file
+
+curl -XGET http://localhost:4000/posts
+
+-- limiter le nombre de résultats
+curl -XGET http://localhost:4000/posts&_limit=1
+
+-- trier les résultats
+curl -XGET "http://localhost:4000/posts?_sort=id&_order=desc"
+
+-- combinaison de tri et de limite
+curl -XGET "http://localhost:4000/dsipilspeoples?_sort=name&_order=desc&_limit=2"
+
+-- illustration de slice
+curl -XGET "http://localhost:4000/dsipilspeoples?_sort=name&_order=desc&_start=1&_end=5"
+
+-- requete sur la clé, toujours id
+curl -XGET http://localhost:4000/posts/1
+
+-- inclusion par relation, clé étrangère = nom de la ressource au singulier suffixé de Id (camel casing)
+curl -XGET http://localhost:4000/posts/1
+curl -XGET http://localhost:4000/comments
+curl -XGET http://localhost:4000/posts/1?_embed=comments
+curl -XGET http://localhost:4000/dsipilspeoples/8
+curl -XGET http://localhost:4000/dsipilspeoplesdetails
+curl -XGET http://localhost:4000/dsipilspeoples/8?_embed=dsipilspeoplesdetails
+
+curl -XGET http://localhost:4000/denis
+
+curl -XPOST -H "Content-Type: application/json" http://localhost:4000/dsipilspeoples -d '{ "name": "lorendeau" }'
+curl -XPOST -H "Content-Type: application/json" http://localhost:4000/dsipilspeoples -d '{ "name": "canoine" }'
+curl -XPUT -H "Content-Type: application/json" http://localhost:4000/dsipilspeoples/10 -d '{ "name": "canoine joelle" }'
+curl -XDELETE http://localhost:4000/dsipilspeoples/10
