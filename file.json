@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server2",
+      "author": "typicode2"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "dsipilspeoples": [
+    {
+      "id": 1,
+      "name": "bamouni"
+    },
+    {
+      "id": 2,
+      "name": "travaglia"
+    },
+    {
+      "id": 3,
+      "name": "genier"
+    },
+    {
+      "id": 4,
+      "name": "levy"
+    },
+    {
+      "id": 5,
+      "name": "cronnier"
+    },
+    {
+      "id": 6,
+      "name": "fantone"
+    },
+    {
+      "id": 7,
+      "name": "schoenacker"
+    },
+    {
+      "id": 8,
+      "name": "gonzalez"
+    }
+  ],
+  "dsipilspeoplesdetails": [
+    {
+      "id": 3,
+      "email": "denis.gonzalez@inra.fr",
+      "dsipilspeopleId": 8
+    },
+    {
+      "id": 33,
+      "email": "fabien.travaglia@inra.fr",
+      "dsipilspeopleId": 2
+    }
+  ]
+}
